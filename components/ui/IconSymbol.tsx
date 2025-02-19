@@ -16,6 +16,7 @@ const MAPPING = {
   'gearshape.fill': 'settings', // Settings icon
   'slider.horizontal.3': 'tune', // Alternative settings icon
   'paperclip.circle.fill': 'attach-file', // Closest match for a paperclip
+  'arrow.backward.square.fill': 'arrow-back'
 } as Partial<
   Record<
     import('expo-symbols').SymbolViewProps['name'],
@@ -42,5 +43,5 @@ export function IconSymbol({
   style?: StyleProp<ViewStyle>;
   weight?: SymbolWeight;
 }) {
-  return <MaterialIcons color={color} size={size} name={MAPPING[name]} style={style} />;
+  return <MaterialIcons color={color} size={size} name={MAPPING[name]} />;
 }
