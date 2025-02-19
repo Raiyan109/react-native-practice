@@ -1,8 +1,29 @@
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
-import { StyleSheet, Text, View } from 'react-native';
+import { useEffect } from 'react';
+import { Alert, BackHandler, StyleSheet, Text, View } from 'react-native';
 
 export default function Settings() {
+    useEffect(() => {
+        const backAction = () => {
+            Alert.alert('Hold on!', 'Are you sure you want to go back?', [
+                {
+                    text: 'Cancel',
+                    onPress: () => null,
+                    style: 'cancel',
+                },
+                { text: 'YES', onPress: () => BackHandler.exitApp() },
+            ]);
+            return true;
+        };
+
+        const backHandler = BackHandler.addEventListener(
+            'hardwareBackPress',
+            backAction,
+        );
+
+        return () => backHandler.remove();
+    }, []);
     return <ParallaxScrollView
         headerBackgroundColor={{ light: '#e9edc9', dark: '#353636' }}
         headerImage={
@@ -12,6 +33,8 @@ export default function Settings() {
                     color="#333333"
                     name="arrow.backward.square.fill"
                 />
+
+                <Text style={styles.headingText}>Settings</Text>
             </View>
         }>
 
@@ -24,4 +47,8 @@ const styles = StyleSheet.create({
         marginTop: 60,
         marginLeft: 20
     },
+    headingText: {
+        fontSize: 40,
+        paddingTop: 50
+    }
 });

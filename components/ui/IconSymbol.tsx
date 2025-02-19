@@ -16,7 +16,8 @@ const MAPPING = {
   'gearshape.fill': 'settings', // Settings icon
   'slider.horizontal.3': 'tune', // Alternative settings icon
   'paperclip.circle.fill': 'attach-file', // Closest match for a paperclip
-  'arrow.backward.square.fill': 'arrow-back'
+  'arrow.backward.square.fill': 'arrow-back',
+  '0.circle.ar': 'account-circle'
 } as Partial<
   Record<
     import('expo-symbols').SymbolViewProps['name'],

@@ -47,7 +47,13 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="gearshape.fill" color={color} />,
         }}
       />
-
+      <Tabs.Screen
+        name="signup"
+        options={{
+          title: 'Signup',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="0.circle.ar" color={color} />,
+        }}
+      />
     </Tabs>
   );
 }
