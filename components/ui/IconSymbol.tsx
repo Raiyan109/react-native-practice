@@ -13,6 +13,9 @@ const MAPPING = {
   'paperplane.fill': 'send',
   'chevron.left.forwardslash.chevron.right': 'code',
   'chevron.right': 'chevron-right',
+  'gearshape.fill': 'settings', // Settings icon
+  'slider.horizontal.3': 'tune', // Alternative settings icon
+  'paperclip.circle.fill': 'attach-file', // Closest match for a paperclip
 } as Partial<
   Record<
     import('expo-symbols').SymbolViewProps['name'],
