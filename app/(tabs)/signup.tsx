@@ -8,6 +8,10 @@ export default function Signup() {
     const [password, setPassword] = useState('')
 
 
+    const handleSubmit = () => {
+
+    }
+
     return <ParallaxScrollView
         headerBackgroundColor={{ light: '#e9edc9', dark: '#353636' }}
         headerImage={
