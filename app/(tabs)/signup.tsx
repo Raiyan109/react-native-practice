@@ -8,8 +8,17 @@ export default function Signup() {
     const [password, setPassword] = useState('')
 
 
-    const handleSubmit = () => {
-
+    const handleSubmit = async () => {
+        // const response = await fetch('https://wesoftin-backend.vercel.app/users', {
+        //     method: 'post',
+        //     headers:{
+        //         'Content-Type': 'application/json'
+        //     }, 
+        //     body: JSON.stringify({
+        //         name,
+        //         password
+        //     })
+        // })
     }
 
     return <ParallaxScrollView
@@ -27,6 +36,7 @@ export default function Signup() {
                 </View>
             </SafeAreaView>
         }>
+
         <View>
             <Text>Username</Text>
             <TextInput
@@ -45,8 +55,8 @@ export default function Signup() {
                 placeholder='Enter your password'
             />
         </View>
+        <Button title='Sign up' onPress={handleSubmit}></Button>
 
-        <Button title='Sign up' onPress={() => { }}></Button>
     </ParallaxScrollView>
 }
 
